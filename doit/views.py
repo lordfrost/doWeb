@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 import datetime
 
 def hello(request):
@@ -10,7 +10,11 @@ def DateTimeNow(request):
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
-def TimePlus(request):
-    now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
+def TimePlus(request, offset):
+    try:
+        offset = int(offset)
+    except ValueError:
+        raise Http404()
+    now = datetime.datetime.now() + datetime.timedelta(houurs=offset)
+    html = "<html><body>It is now %s, and will bw %s.</body></html>" % (now, offset)
     return HttpResponse(html)
