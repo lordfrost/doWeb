@@ -1,4 +1,4 @@
-# Django settings for doWeb project.
+# -*- coding: utf-8 -*-
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
