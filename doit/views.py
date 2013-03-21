@@ -15,6 +15,6 @@ def TimePlus(request, offset):
         offset = int(offset)
     except ValueError:
         raise Http404()
-    now = datetime.datetime.now() + datetime.timedelta(houurs=offset)
+    now = datetime.datetime.now() + datetime.timedelta(hours=offset)
     html = "<html><body>It is now %s, and will bw %s.</body></html>" % (now, offset)
     return HttpResponse(html)
