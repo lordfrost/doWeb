@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Django template</title>
+    <title>{% block title %}django in use!{% endblock %}</title>
 </head>
+
 <body>
-<h1>Мой супер полезный сайт про время</h1>
-<p>Сейчас - {{ now }}</p>
 
-<hr>
+<h1>{% block header %}Default header{% endblock %}</h1>
 
-<p>thanks for visiting my site</p>
+<div>{% block contetnt %}Default content{% endblock %}</div>
+
+<div>
+    {% block footer %}
+    <hr>
+    <p>Thanks for visiting my site</p>
+    {% endblock %}
+</div>
 
 </body>
 </html>

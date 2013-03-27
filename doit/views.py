@@ -8,7 +8,7 @@ def hello(request):
 
 def DateTimeNow(request):
     now = datetime.datetime.now()
-    return render_to_response('main.html', {'now': now})
+    return render_to_response('datenow.html', {'now': now})
 
 def TimePlus(request, offset):
     try:
