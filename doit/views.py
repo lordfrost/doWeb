@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse, Http404
+from django.shortcuts import render_to_response
 import datetime
 
 def hello(request):
@@ -7,8 +8,7 @@ def hello(request):
 
 def DateTimeNow(request):
     now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
-    return HttpResponse(html)
+    return render_to_response('main.html', {'now': now})
 
 def TimePlus(request, offset):
     try:
