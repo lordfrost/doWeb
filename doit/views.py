@@ -15,5 +15,6 @@ def TimePlus(request, offset):
         offset = int(offset)
     except ValueError:
         raise Http404()
-    now_plus_url= datetime.datetime.now() + datetime.timedelta(hours=offset)
-    return render_to_response('timeplus.html', {'now': datetime.datetime.now, 'nowplus': now_plus_url, 'raznica': offset})
+    now_plus_url = datetime.datetime.now() + datetime.timedelta(hours=offset)
+    return render_to_response('timeplus.html', {'now': datetime.datetime.now, 'nowplus': now_plus_url,
+                                                'raznica': offset})
