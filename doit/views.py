@@ -3,12 +3,15 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render_to_response
 import datetime
 
+
 def hello(request):
     return HttpResponse("Здравствуй, мир")
+
 
 def DateTimeNow(request):
     now = datetime.datetime.now()
     return render_to_response('time.html', {'now': now})
+
 
 def TimePlus(request, offset):
     try:
