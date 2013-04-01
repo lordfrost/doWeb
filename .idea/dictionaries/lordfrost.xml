@@ -1,7 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="lordfrost">
     <words>
+      <w>csrf</w>
       <w>datenow</w>
+      <w>middleware</w>
+      <w>wsgi</w>
     </words>
   </dictionary>
 </component>

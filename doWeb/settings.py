@@ -28,8 +28,10 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
 MEDIA_ROOT = '/home/lordfrost/pymedia'
 MEDIA_URL = ''
+
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
